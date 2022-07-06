@@ -1,0 +1,14 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="employeedirectory1.controller.Home" displayBlock="true">
+    <Page id="pnage" title="{i18n>title}">
+    
+        <content>
+    
+            <Button press=".onDisplayNotFound" xmlns="sap.m" text="{i18n>button1}" id="button1"/>
+    
+            <Button press=".onShowEmployeeList" xmlns="sap.m" text="{i18n>button2}" id="button2"/>
+    
+            <Button press=".onShowEmployeesOverview" xmlns="sap.m" text="{i18n>button3}" id="button3"/>
+    
+        </content>
+    </Page>
+</mvc:View>
