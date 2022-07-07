@@ -1,0 +1,11 @@
+<mvc:View
+   controllerName="employeedirectory1.controller.NotFound"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <MessagePage id="notFound"
+      title="{i18n>NF}"
+      text="{i18n>NFtext}"
+      description="{i18n>NFdescription}"
+      showNavButton="true"
+	navButtonPress="onNavBack"/>
+</mvc:View>

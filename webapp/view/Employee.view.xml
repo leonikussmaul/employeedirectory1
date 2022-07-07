@@ -1,11 +1,12 @@
 <mvc:View
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:f="sap.ui.layout.form">
+	xmlns:f="sap.ui.layout.form"
+    controllerName="employeedirectory1.controller.Employee">
 	<Page id="employeePage"
 		title="{i18n>EmloyeeDetailsOf} {FirstName} {LastName}"
 		showNavButton="true"
-		navButtonPress=".onNavBack"
+		navButtonPress="onNavBack"
 		class="sapUiResponsiveContentPadding">
   	<content>
     

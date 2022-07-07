@@ -116,6 +116,20 @@
             "target": [
               "notFound"
             ]
+          }, 
+          {
+            "name": "EmployeeList",
+            "pattern": "EmployeeList",
+            "target": [
+              "TargetList"
+            ]
+          }, 
+          {
+            "name": "Overview",
+            "pattern": "Overview",
+            "target": [
+              "TargetOverview"
+            ]
           }
       ],
       "targets": {
@@ -134,10 +148,27 @@
             "viewName": "Employee"
           },
             "notFound": {
-               "id": "notFound",
-               "name": "NotFound",
+                "viewType":"XML",
+               "viewId": "notFound",
+               "clearControlAggregation": false,
+               "viewName": "NotFound",
                "transition": "show"
-            }
+            },
+           
+				"TargetList": {
+                    "viewType":"XML",
+					"viewId": "employeeList",
+                    "viewName": "EmployeeList",
+                    "clearControlAggregation": false,
+					"viewLevel" : 2
+				}, 
+                "TargetOverview": {
+                    "viewType":"XML",
+					"viewId": "overview",
+                    "viewName": "Overview",
+                    "clearControlAggregation": false,
+					"viewLevel" : 2
+				}
       }
     },
     "rootView": {

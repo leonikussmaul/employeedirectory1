@@ -1,25 +1,29 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/core/UIComponent"
-],
-    /**
-     * @param {typeof sap.ui.core.mvc.Controller} Controller
-     */
-    function (Controller, UIComponent) {
+
+    sap.ui.define([
+        "employeedirectory1/controller/BaseController"
+     ], function (BaseController) {
         "use strict";
-
-        return Controller.extend("employeedirectory1.controller.Home", {
-            onInit: function () {
-
-            },
-            getRouter : function () {
-                return UIComponent.getRouterFor(this);
-            },
+        return BaseController.extend("employeedirectory1.controller.Home", {
+           onInit: function () {
+           }, 
+           onDisplayNotFound: function(){
+            this.getRouter().getTargets().display("notFound", {
+				fromTarget : "Home"
+            });
+        },
+           
         onShowEmployeeList: function(){
-            this.getRouter().navTo("RouteEmployee");
-        }, 
-        onDisplayNotFound: function(){
-            this.getRouter().navTo("NotFound");
-        }
+            this.getRouter().getTargets().display("TargetList");
+           }, 
+
+           onShowEmployeesOverview: function(){
+            this.getRouter().getTargets().display("TargetOverview");
+               
+           }
+           
         });
-    });
+     });
+
+
+
+    

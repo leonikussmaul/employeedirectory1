@@ -1,0 +1,91 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" 
+        xmlns:mvc="sap.ui.core.mvc" 
+        xmlns="sap.m" 
+        controllerName="employeedirectory1.controller.Overview" 
+        displayBlock="true">
+     <Page id="page" title="{i18n>EmpOverviewTitle}">
+
+        <content>
+        <Table items="{/Employees}" id="table0">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="{i18n>Employees}" level="H2"/>
+                        <ToolbarSpacer />
+                        <SearchField id="searchField" search=".onSearchTable" width="50%"/>
+                        <Button icon="sap-icon://sort" press=".onSortButtonPressed"/>
+                    </Toolbar>
+                </headerToolbar>
+            <items>
+                <ColumnListItem type="Active" id="item0">
+                    <cells>
+                        <Text text="{EmployeeID}" id="text0"/>
+                        <Text text="{FirstName}" id="text1"/>
+                        <Text text="{LastName}" id="text2"/>
+                        <Text text="{Address}" id="text3"/>
+                        <Text text="{City}" id="text4"/>
+                        <Text text="{Region}" id="text5"/>
+                        <Text text="{PostalCode}" id="text6"/>
+                        <Text text="{Country}" id="text7"/>
+                        <Text text="{HomePhone}" id="text8"/>
+                        
+                        </cells>
+                </ColumnListItem>
+            </items>
+            <columns>
+                <Column id="column0">
+                    <header>
+                        <Label text="{i18n>label0}" id="label0"/>
+                    </header>
+                </Column>
+                <Column id="column1">
+                    <header>
+                        <Label text="{i18n>label1}" id="label1"/>
+                    </header>
+                </Column>
+                <Column id="column2">
+                    <header>
+                        <Label text="{i18n>label2}" id="label2"/>
+                    </header>
+                </Column>
+
+                <Column id="column3">
+                    <header>
+                        <Label text="{i18n>label3}" id="label3"/>
+                    </header>
+                </Column>
+
+                <Column id="column4">
+                    <header>
+                        <Label text="{i18n>label4}" id="label4"/>
+                    </header>
+                </Column>
+
+                <Column id="column5">
+                    <header>
+                        <Label text="{i18n>label5}" id="label5"/>
+                    </header>
+                </Column>
+
+                <Column id="column6">
+                    <header>
+                        <Label text="{i18n>label6}" id="label6"/>
+                    </header>
+                </Column>
+                 
+                 <Column id="column7">
+                    <header>
+                        <Label text="{i18n>label7}" id="label7"/>
+                    </header>
+                </Column>
+
+                <Column id="column8">
+                    <header>
+                        <Label text="{i18n>label8}" id="label8"/>
+                    </header>
+                </Column>
+
+                </columns>
+                </Table>
+        </content>
+        </Page>
+</mvc:View>
