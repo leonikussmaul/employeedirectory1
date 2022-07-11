@@ -2,8 +2,11 @@
         xmlns:mvc="sap.ui.core.mvc" 
         xmlns="sap.m" 
         controllerName="employeedirectory1.controller.Overview" 
-        displayBlock="true">
-     <Page id="page" title="{i18n>EmpOverviewTitle}">
+        displayBlock="true"
+>
+     <Page id="page" title="{i18n>EmpOverviewTitle}"
+     showNavButton="true"
+	navButtonPress=".onNavBack">
 
         <content>
         <Table items="{/Employees}" id="table0">

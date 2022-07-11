@@ -97,29 +97,22 @@
       },
       "routes": [
         {
-          "name": "RouteHome",
-          "pattern": ":?query:",
+          "name": "Home",
+          "pattern": "",
           "target": [
-            "TargetHome"
+            "Home"
           ]
         },
         {
             "name": "RouteEmployee",
-            "pattern": "Employee",
+            "pattern": "{employeeId}",
             "target": [
               "TargetEmployee"
             ]
           }, 
           {
-            "name": "NotFound",
-            "pattern": "NotFound",
-            "target": [
-              "notFound"
-            ]
-          }, 
-          {
             "name": "EmployeeList",
-            "pattern": "EmployeeList",
+            "pattern": "employeelist",
             "target": [
               "TargetList"
             ]
@@ -133,27 +126,28 @@
           }
       ],
       "targets": {
-        "TargetHome": {
+        "Home": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Home",
-          "viewName": "Home"
+          "id": "Home",
+          "view": "Home", 
+          "name": "Home", 
+          "viewLevel": 1
         },
         "TargetEmployee": {
             "viewType": "XML",
             "transition": "slide",
             "clearControlAggregation": false,
             "viewId": "Employee",
-            "viewName": "Employee"
+            "viewName": "Employee", 
+            "viewLevel": 3
           },
-            "notFound": {
-                "viewType":"XML",
-               "viewId": "notFound",
-               "clearControlAggregation": false,
-               "viewName": "NotFound",
-               "transition": "show"
-            },
+          "notFound": {
+             "id": "notFound",
+             "name": "NotFound",
+             "transition": "show"
+          },
            
 				"TargetList": {
                     "viewType":"XML",

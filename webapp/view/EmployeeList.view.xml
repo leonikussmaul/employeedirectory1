@@ -9,7 +9,7 @@
 		navButtonPress=".onNavBack"
 		class="sapUiResponsiveContentPadding">
 		<content>
-			<List id="employeeList" headerText="{i18n>ListOfAllEmployees}" items="{/Employees}">
+			<List id="employeeList" headerText="{i18n>ListOfAllEmployees}" items="{/Employees}" >
 				<items>
 					<StandardListItem
 						title="{FirstName} {LastName}"

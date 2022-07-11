@@ -13,7 +13,7 @@
         },
            
         onShowEmployeeList: function(){
-            this.getRouter().getTargets().display("TargetList");
+            this.getRouter().getTargets().display("EmployeeList");
            }, 
 
            onShowEmployeesOverview: function(){
